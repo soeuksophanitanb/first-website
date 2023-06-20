@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Montserrat;
+}
+
+a:visited {
+  color: unset;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color: #3b82f6;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  color: #2563eb;
+}
+
+body {
+  background-color: #e2e8f0;
+}
+
+.navbar {
+  background-color: transparent;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+}
+
+.navbar nav {
+  display: flex;
+}
+
+.navbar nav ul {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.navbar nav ul a {
+  position: relative;
+  display: flex;
+}
+
+.navbar nav ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background-color: #2563eb;
+  transition: all 0.25s ease-in-out;
+  border-radius: 10px;
+}
+
+.navbar nav ul a:hover::after {
+  width: 100%;
+}
+
+.tools svg {
+  width: 24px;
+  display: none;
+  stroke-width: 2;
+}
+
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1687120484923-542ddb1edb63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  background-position: contain top;
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .tools svg {
+    display: block;
+  }
+}
